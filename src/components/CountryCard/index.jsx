@@ -8,7 +8,7 @@ function Root({ children }) {
 function Card({ slug, children }) {
     return (
         <section className={styles.card}>
-            <Link to={`/country-details/${slug}`}>{children}</Link>
+            <Link to={`/country/${slug}`}>{children}</Link>
         </section>
     )
 }

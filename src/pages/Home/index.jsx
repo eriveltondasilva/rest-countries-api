@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
 
                 {error && <Navigate to="/error" />}
-                {countries.length === 0 && isLoading && <Loading />}
+                {!countries && isLoading && <Loading />}
                 {countries.length === 0 && filterByText && (
                     <div className={styles.no_country}>No Country Found...</div>
                 )}
@@ -64,7 +64,7 @@ export default function Home() {
                 {countries && (
                     <CountryCard.Root>
                         {countries.map(country => (
-                            <CountryCard.Card key={country.cca3} slug={country.cca3}>
+                            <CountryCard.Card key={country.cca3} slug={country.cca3?.toLowerCase()}>
                                 <CountryCard.Img
                                     flag={country.flags.svg}
                                     alt={country.flags.alt || country.name.common}

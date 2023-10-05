@@ -1,11 +1,12 @@
 import styles from './styles.module.scss'
-import { useParams, useNavigate, Navigate, Link } from 'react-router-dom'
+import { useParams, useNavigate, Navigate } from 'react-router-dom'
 import PageTitleUtils from '@/utils/PageTitleUtils'
 import useGetApiData from '@/hooks/useGetApiData'
 
 // #Componentes
 import { ArrowLeft } from '@/components/Icons'
 import Loading from '@/components/Loading'
+import BorderCountries from '@/components/BorderCountries'
 
 export default function Details() {
     const { slug } = useParams()
@@ -81,20 +82,7 @@ export default function Details() {
                             </div>
                         </div>
 
-                        <div>
-                            <span>Border Countries:</span>
-                            <ul className={styles.border_items}>
-                                {country.borders ? (
-                                    country.borders.map(item => (
-                                        <li className={styles.border_item} key={item}>
-                                            <Link to={`/country-details/${item}`}>{item}</Link>
-                                        </li>
-                                    ))
-                                ) : (
-                                    <li className={styles.border_item}>No Borders</li>
-                                )}
-                            </ul>
-                        </div>
+                        <BorderCountries borders={country.borders} />
                     </div>
                 </main>
             )}
