@@ -1,4 +1,4 @@
-# <center>:file_cabinet: Projeto React.js 01</center>
+# :file_cabinet: Projeto React.js 01
 
 <br>
 
@@ -60,7 +60,7 @@ Esta é uma solução para o [desafio da API REST de países com alternância de
 
 ## Links
 
-- URL no Frontend Mentor: [Add solution URL here](https://your-solution-url.com)
+- URL no Frontend Mentor: <https://rest-countries-api-eriveltonsilva.vercel.app/>
 - URL do site em produção: [Add live site URL here](https://your-live-site-url.com)
 
 <br>
