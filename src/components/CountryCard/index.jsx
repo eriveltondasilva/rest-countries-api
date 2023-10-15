@@ -14,7 +14,7 @@ function Card({ slug, children }) {
 }
 
 function Img({ flag = '', alt = '' }) {
-    return <img className={styles.image} src={flag} alt={alt} />
+    return <img className={styles.image} src={flag} alt={alt} loading='lazy' />
 }
 
 function Body({ children }) {
